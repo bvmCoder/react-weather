@@ -16,11 +16,13 @@ var {name} = obj;
 // rather use ES6 Destructuring syntax
 var { Route, Router, IndexRoute, hashHistory } = require('react-router');
 var Main = require('Main');
+var Weather = require('Weather');
+var About = require('About');
 
 ReactDOM.render(
   <Router history={hashHistory}>
     <Route path="/" component={Main}>
-
+      <IndexRoute component={Weather}/>
     </Route>
   </Router>,
   _ById('app')
