@@ -5,14 +5,17 @@ var OpenWeatherMap = require('OpenWeatherMap');
 
 var Weather = React.createClass({
   getInitialState: function () {
+    // set isLoading property
     return {
-      location: 'India',
-      temp: 38
+      isLoading: false
     };
   },
   handleSearch: function (location){
     console.log(location);
     var that = this;
+    this.setState ({
+      isLoading: true
+    })
     OpenWeatherMap
       .getTemp(location)
       .then(function (temp){
@@ -20,10 +23,14 @@ var Weather = React.createClass({
         // this binding will lost inside the async function
         that.setState({
           location: location,
-          temp: temp
+          temp: temp,
+          isLoading: false
         });
       }, function (errMessage) {
         alert('Error Occured', errMessage);
+        that.setState({
+          isLoading: false
+        })
       });
       /*
       this.setState({
@@ -34,12 +41,24 @@ var Weather = React.createClass({
 
   },
   render: function () {
-    var { temp, location } = this.state;
+    var { temp, location, isLoading } = this.state;
+
+    function renderMessage() {
+      if(isLoading) {
+        return (
+          <h3>Temp is Loading ...</h3>
+        );
+      } else if (temp && location){
+        return (
+          <WeatherMessage temp={temp} location={location} />
+        );
+      }
+    }
     return (
       <div>
         <h3>Weather Component</h3>
         <WeatherForm onSearch={this.handleSearch} />
-        <WeatherMessage temp={temp} location={location} />
+        {renderMessage()}
       </div>
     );
   }
