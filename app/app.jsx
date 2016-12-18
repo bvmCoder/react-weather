@@ -30,3 +30,6 @@ ReactDOM.render(
   </Router>,
   _ById('app')
 );
+
+// nesting routes
+// for IndexRoute don't use Link use IndexLink
