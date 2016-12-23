@@ -18,7 +18,8 @@ module.exports = {
                   return res.data.main.temp;
                 }
               }, function (rej) {
-                throw new Error(rej.data.message);
+                debugger;
+                throw new Error(rej.response.data.message);
               });
 
   }
