@@ -1,0 +1,13 @@
+// variables here
+$heading-space: 2.5rem;
+$page-title-color: #1C1436;
+
+.page-title {
+  color: $page-title-color;
+  margin-top: $heading-space;
+  margin-bottom: $heading-space;
+}
+
+input[type=search] {
+  box-shadow: none;
+}
