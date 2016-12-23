@@ -18,7 +18,8 @@ var Main = React.createClass({
     return (
       <div>
         <Nav/>
-        <div className="row">
+        <div style={{marginTop: "1rem"}}></div>
+        <div className="row" style={{border: "2px solid #466d98"}}>
           <div className="medium-6 large-4 small-centered columns">
             {this.props.children}
           </div>

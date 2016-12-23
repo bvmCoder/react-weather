@@ -9,7 +9,7 @@ var hashHistory = require('react-router').hashHistory;
 
 // rather use ES6 Destructuring syntax
 // I am now using browserHistory rather than hashHistory
-var { Route, Router, IndexRoute, browserHistory } = require('react-router');
+var { Route, Router, IndexRoute, browserHistory, hashHistory } = require('react-router');
 var Main = require('Main');
 var Weather = require('Weather');
 var About = require('About');
@@ -23,10 +23,14 @@ var obj = {
 var {name} = obj;
 // load foundation-sites
 // style and css loaders
-require('style!css!foundation-sites/dist/foundation.min.css')
+require('style!css!foundation-sites/dist/foundation.min.css');
 $(document).foundation();
+// app css which is custom css
+require('style!css!sass!applicationStyles');
+
+
 ReactDOM.render(
-  <Router history={browserHistory}>
+  <Router history={hashHistory}>
     <Route path="/" component={Main}>
       <Route path="about" component={About}/>
       <Route path="examples" component={Examples}/>

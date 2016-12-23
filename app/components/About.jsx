@@ -5,7 +5,7 @@ var About = React.createClass({
   render: function () {
     return (
       <div>
-        <h1 className="text-center">About Component</h1>
+        <h1 className="text-center page-title">About</h1>
         <p>This is a Simple Weather Application build using React and
         React-Router. We used openweatermap.org Api to retieve the data.
         </p>
