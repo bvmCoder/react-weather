@@ -4,7 +4,7 @@ var React = require('react');
 var WeatherForm = React.createClass({
   onFormSubmit: function (evt) {
     evt.preventDefault();
-    
+
     var location = this.refs.location.value;
     if (location.length > 0){
       this.refs.location.value = '';
@@ -16,7 +16,7 @@ var WeatherForm = React.createClass({
       <div>
         <form onSubmit={this.onFormSubmit}>
           <input type="text" ref="location" />
-          <button>Fetch Weather</button>
+          <button className="button">Fetch Weather</button>
         </form>
 
       </div>

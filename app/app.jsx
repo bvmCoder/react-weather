@@ -8,6 +8,7 @@ var hashHistory = require('react-router').hashHistory;
 */
 
 // rather use ES6 Destructuring syntax
+// I am now using browserHistory rather than hashHistory
 var { Route, Router, IndexRoute, browserHistory } = require('react-router');
 var Main = require('Main');
 var Weather = require('Weather');
