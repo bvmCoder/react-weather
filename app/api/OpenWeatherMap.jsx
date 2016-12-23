@@ -18,8 +18,9 @@ module.exports = {
                   return res.data.main.temp;
                 }
               }, function (rej) {
-                debugger;
-                throw new Error(rej.response.data.message);
+                // debugger;
+                // throw new Error(rej.response.data.message);
+                throw new Error('Unable to fetch weather for that Location Provided!')
               });
 
   }

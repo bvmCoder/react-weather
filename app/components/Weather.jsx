@@ -34,7 +34,7 @@ var Weather = React.createClass({
           isLoading: false,
           errorMessage: errMessage.message
         })
-        alert('Error Occured', errMessage);
+        // alert('Error Occured', errMessage);
 
       });
       /*
