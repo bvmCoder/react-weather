@@ -6,6 +6,13 @@ var Router = require('react-router').Router;
 var IndexRoute = require('react-router').IndexRoute;
 var hashHistory = require('react-router').hashHistory;
 */
+
+// rather use ES6 Destructuring syntax
+var { Route, Router, IndexRoute, hashHistory } = require('react-router');
+var Main = require('Main');
+var Weather = require('Weather');
+var About = require('About');
+var Examples = require('Examples');
 const _ById = (id) => document.getElementById(id);
 
 var obj = {
@@ -13,13 +20,10 @@ var obj = {
 };
 
 var {name} = obj;
-// rather use ES6 Destructuring syntax
-var { Route, Router, IndexRoute, hashHistory } = require('react-router');
-var Main = require('Main');
-var Weather = require('Weather');
-var About = require('About');
-var Examples = require('Examples');
-
+// load foundation-sites
+// style and css loaders
+require('style!css!foundation-sites/dist/foundation.min.css')
+$(document).foundation();
 ReactDOM.render(
   <Router history={hashHistory}>
     <Route path="/" component={Main}>
