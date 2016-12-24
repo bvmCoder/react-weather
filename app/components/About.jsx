@@ -1,13 +1,13 @@
 var React = require('react');
 var { Link } = require('react-router');
 var ClassNames = require('ClassNames');
-// var { classSet } = ClassNames;
+var { classSet } = ClassNames;
 
 
 var About = React.createClass({
   render: function () {
     debugger;
-    var classNames = ClassNames.classSet('text-center', 'page-title');
+    var classNames = classSet('text-center', 'page-title');
     console.log(classNames);
     return (
       <div>

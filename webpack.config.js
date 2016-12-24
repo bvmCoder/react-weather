@@ -32,7 +32,8 @@ module.exports = {
       OpenWeatherMap: 'app/api/OpenWeatherMap.jsx',
       ErrorModal: 'app/components/ErrorModal.jsx',
       applicationStyles: 'app/styles/app.scss',
-      ClassNames: 'app/ClassNames/index.js'
+      ClassNames: 'app/ClassNames/index.js',
+      CheckBox: 'app/components/CheckBox.js'
     },
     extensions: ['', '.js', '.jsx']
   },
