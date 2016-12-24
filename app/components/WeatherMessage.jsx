@@ -1,4 +1,5 @@
 var React = require('react');
+var ClassNames = require('ClassNames');
 
 var WeatherMessage = React.createClass({
   render: function () {

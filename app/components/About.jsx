@@ -1,11 +1,17 @@
 var React = require('react');
 var { Link } = require('react-router');
+var ClassNames = require('ClassNames');
+// var { classSet } = ClassNames;
+
 
 var About = React.createClass({
   render: function () {
+    debugger;
+    var classNames = ClassNames.classSet('text-center', 'page-title');
+    console.log(classNames);
     return (
       <div>
-        <h1 className="text-center page-title">About</h1>
+        <h1 className={classNames}>About</h1>
         <p>This is a Simple Weather Application build using React and
         React-Router. We used openweatermap.org Api to retieve the data.
         </p>
