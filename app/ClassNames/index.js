@@ -3,7 +3,7 @@
 
     var hasOwn = {}.hasOwnProperty;
 
-    var mdcClassnames = {
+    var ClassNames = {
 
         setCssModule: function() {
             var classes = [];
@@ -57,14 +57,14 @@
     };
 
     if (typeof module !== 'undefined' && module.exports) {
-        module.exports = mdcClassnames;
+        module.exports = ClassNames;
     } else if (typeof define === 'function' && typeof define.amd === 'object' && define.amd) {
-        // register as 'mdcClassnames', consistent with npm package name
-        define('mdcClassnames', [], function () {
-            return mdcClassnames;
+        // register as 'ClassNames', consistent with npm package name
+        define('ClassNames', [], function () {
+            return ClassNames;
         });
     } else {
-        window.mdcClassnames = mdcClassnames;
-    }    
+        window.ClassNames = ClassNames;
+    }
 
-}());
+})();
