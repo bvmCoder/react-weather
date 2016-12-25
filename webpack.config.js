@@ -33,7 +33,8 @@ module.exports = {
       ErrorModal: 'app/components/ErrorModal.jsx',
       applicationStyles: 'app/styles/app.scss',
       ClassNames: 'app/ClassNames/index.js',
-      CheckBox: 'app/components/CheckBox.js'
+      CheckBox: 'app/components/CheckBox.js',
+      Button: 'app/components/Button.js'
     },
     extensions: ['', '.js', '.jsx']
   },

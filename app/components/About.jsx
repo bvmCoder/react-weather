@@ -6,7 +6,7 @@ var { classSet } = ClassNames;
 
 var About = React.createClass({
   render: function () {
-    debugger;
+    // debugger;
     var classNames = classSet('text-center', 'page-title');
     console.log(classNames);
     return (

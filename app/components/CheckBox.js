@@ -4,7 +4,7 @@ const { PropTypes, Component } = React;
 
 class CheckBox extends Component {
   constructor (props) {
-    debugger;
+    // debugger;
     super (props);
     this.handleNoop = this.handleNoop.bind(this);
     this.handleChange = this.handleChange.bind(this);

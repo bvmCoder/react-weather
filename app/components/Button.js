@@ -20,18 +20,19 @@ class Button extends Component {
     if (this.props.disabled) {
       extraProps.disabled = true;
     }
+    debugger;
     let className = classSet(this.props.className, {
-      button: true,
+      button: true, // button className will always be true
       disabled: this.props.disabled,
       small: this.props.size && this.props.size === "small",
       medium: this.props.size && this.props.size === "medium",
       large: this.props.size && this.props.size === "large",
       primary: this.props.primary,
       secondary: this.props.secondary
-    })
+    });
 
     return (
-      <button {...extraProps} type="button" onClick={this.handleClick}>
+      <button className={className} {...extraProps} type="button" onClick={this.handleClick}>
         {this.props.children}
       </button>
     );

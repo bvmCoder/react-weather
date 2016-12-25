@@ -1,4 +1,5 @@
 var React = require('react');
+var Button = require('Button');
 
 
 var WeatherForm = React.createClass({
@@ -16,7 +17,9 @@ var WeatherForm = React.createClass({
       <div>
         <form onSubmit={this.onFormSubmit}>
           <input type="search" ref="location" placeholder="Search Weather"/>
-          <button className="expanded hollow button">Fetch Weather</button>
+          {/* this className will become props for the original button component */}
+          <Button className="expanded hollow">Fetch Weather</Button>
+          {/*<button className="expanded hollow button">Fetch Weather</button>*/}
         </form>
 
       </div>
