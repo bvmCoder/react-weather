@@ -30,7 +30,7 @@ class Button extends Component {
       primary: this.props.primary,
       secondary: this.props.secondary
     });
-
+    console.log('Button Rendered');
     return (
       <button className={className} {...extraProps} type="button" onClick={this.handleClick}>
         {this.props.children}

@@ -1,5 +1,6 @@
 var React = require('react');
 var { Link, IndexLink } = require('react-router');
+var Button = require('Button');
 
 var Nav = React.createClass({
   onSearch: function (evt) {
@@ -43,7 +44,7 @@ var Nav = React.createClass({
                 <input type="search" ref="navBarInput" placeholder="Search Weather" />
               </li>
               <li>
-                <button className="button">Fetch Weather</button>
+                <Button onClick={this.onSearch}>Fetch Weather</Button>
               </li>
             </ul>
           </form>
@@ -75,7 +76,9 @@ var Nav = React.createClass({
   }
 });
 
-*/
+
 
 // Link component
 // use IndexLink for IndexRoute component
+
+*/
